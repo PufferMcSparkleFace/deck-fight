@@ -356,6 +356,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1766666973849286621, guid: 54bff9b7ba711c244b0994be68db0dcb, type: 3}
+      propertyPath: m_NotificationBehavior
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1766666973849286621, guid: 54bff9b7ba711c244b0994be68db0dcb, type: 3}
+      propertyPath: m_ActionEvents.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1766666973849286621, guid: 54bff9b7ba711c244b0994be68db0dcb, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_ActionId
+      value: e13b0bd9-187a-46e6-9d55-648d8d8e29c7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1766666973849286621, guid: 54bff9b7ba711c244b0994be68db0dcb, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_ActionName
+      value: Players/Special[/Keyboard/h,/Keyboard/numpad2]
+      objectReference: {fileID: 0}
     - target: {fileID: 2154150163122731412, guid: 54bff9b7ba711c244b0994be68db0dcb, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5
