@@ -40,42 +40,6 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
-                },
-                {
-                    "name": "Movement P2",
-                    "type": "PassThrough",
-                    "id": "e621faae-7166-404a-9d50-f6ab8f38805b",
-                    "expectedControlType": "Vector2",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Attacks P2",
-                    "type": "Button",
-                    "id": "a5113832-2b4b-4fd2-b17a-caf1eabd8a08",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Jump P2",
-                    "type": "Button",
-                    "id": "ad628fb9-ddce-4cbd-9da1-33bd92d5500e",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Crouch P2",
-                    "type": "Button",
-                    "id": "1e399873-480f-43bc-ac93-ea384d7e237b",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -97,6 +61,28 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "WASD",
+                    "action": "Attacks",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "eb3a4820-4718-4c14-9638-9e2ee68972d6",
+                    "path": "<Keyboard>/numpad1",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Numpad",
+                    "action": "Attacks",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b52f83b9-9639-4efd-9363-a76707891878",
+                    "path": "<Keyboard>/numpad2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Numpad",
                     "action": "Attacks",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -135,12 +121,56 @@
                     "isPartOfComposite": true
                 },
                 {
+                    "name": "2D Vector",
+                    "id": "ebb348ff-9d26-44d4-95d5-68a3506aa84e",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "left",
+                    "id": "e3328146-3c3e-4d7c-9efb-8cb1b7738076",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Numpad",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "80d12c06-238a-49c5-9684-2b6a88770854",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Numpad",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
                     "name": "",
                     "id": "6f4e8e9c-d363-4a95-90d7-7d190adba21f",
                     "path": "<Keyboard>/w",
                     "interactions": "",
                     "processors": "",
                     "groups": "WASD",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a7de0d68-005c-436f-bfb8-f34431c4150e",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Numpad",
                     "action": "Jump",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -157,79 +187,13 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "2D Vector",
-                    "id": "23d64b1c-db2a-4da1-9715-3b5ce307e9ae",
-                    "path": "2DVector",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Movement P2",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "left",
-                    "id": "fc4c4f62-6d85-4b9f-8af7-2b31aceda8bd",
-                    "path": "<Keyboard>/leftArrow",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Numpad",
-                    "action": "Movement P2",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "right",
-                    "id": "a52f7ed3-00d5-43e7-80ca-45b062f475bf",
-                    "path": "<Keyboard>/rightArrow",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Numpad",
-                    "action": "Movement P2",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
                     "name": "",
-                    "id": "4c459503-fea8-4a08-9714-753d777364e8",
-                    "path": "<Keyboard>/numpad1",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Numpad",
-                    "action": "Attacks P2",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "b89bc4bf-ee7e-45ff-9522-58ce19eadc4d",
-                    "path": "<Keyboard>/numpad2",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Numpad",
-                    "action": "Attacks P2",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "0d56a699-5560-4ce1-9b31-6c164ea5309f",
-                    "path": "<Keyboard>/upArrow",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Numpad",
-                    "action": "Jump P2",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "726c9e97-2172-4905-820f-84626f836bfd",
+                    "id": "6700fe59-1de9-44ea-9eb8-1dc33004952c",
                     "path": "<Keyboard>/downArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "Numpad",
-                    "action": "Crouch P2",
+                    "action": "Crouch",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
