@@ -142,6 +142,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 0653f60a-e4fc-4c1e-8e08-98b4ed4eb37f
     m_ActionName: Players/Crouch[/Keyboard/s]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e13b0bd9-187a-46e6-9d55-648d8d8e29c7
+    m_ActionName: Players/Special[/Keyboard/h,/Keyboard/numpad2]
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: WASD
   m_DefaultActionMap: Players
