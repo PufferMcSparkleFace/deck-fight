@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         controller = gameObject.GetComponent<CharacterController>();
+
     }
 
     public void OnMove(InputAction.CallbackContext context)
