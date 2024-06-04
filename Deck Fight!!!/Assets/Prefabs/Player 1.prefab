@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2154150163122731412}
-  - component: {fileID: 4061032572177972107}
   - component: {fileID: 1766666973849286621}
+  - component: {fileID: 4061032572177972107}
   - component: {fileID: 4715607078383530273}
   - component: {fileID: 8994667007314097188}
   - component: {fileID: 848097250610832532}
@@ -38,21 +38,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4061032572177972107
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8446944773247103219}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f627f7dfc0c98dc4089e3f6b6c74bd40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerSpeed: 2
-  jumpHeight: 1
-  gravityValue: -9.81
 --- !u!114 &1766666973849286621
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,7 +128,19 @@ MonoBehaviour:
     m_ActionId: 0653f60a-e4fc-4c1e-8e08-98b4ed4eb37f
     m_ActionName: Players/Crouch[/Keyboard/s]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4061032572177972107}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: e13b0bd9-187a-46e6-9d55-648d8d8e29c7
     m_ActionName: Players/Special[/Keyboard/h,/Keyboard/numpad2]
   m_NeverAutoSwitchControlSchemes: 1
@@ -151,6 +148,21 @@ MonoBehaviour:
   m_DefaultActionMap: Players
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &4061032572177972107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8446944773247103219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f627f7dfc0c98dc4089e3f6b6c74bd40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSpeed: 2
+  jumpHeight: 1
+  gravityValue: -9.81
 --- !u!33 &4715607078383530273
 MeshFilter:
   m_ObjectHideFlags: 0
