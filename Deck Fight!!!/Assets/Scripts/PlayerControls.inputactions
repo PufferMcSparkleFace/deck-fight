@@ -15,9 +15,18 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Attacks",
+                    "name": "Normal",
                     "type": "Button",
                     "id": "c5faf66b-3a4f-4cd7-9dba-7e28d1291b8b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Special",
+                    "type": "Button",
+                    "id": "e13b0bd9-187a-46e6-9d55-648d8d8e29c7",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -50,18 +59,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "WASD",
-                    "action": "Attacks",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "197b9128-4cda-42a6-92fd-e8617529f321",
-                    "path": "<Keyboard>/h",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "WASD",
-                    "action": "Attacks",
+                    "action": "Normal",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -72,18 +70,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Numpad",
-                    "action": "Attacks",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "b52f83b9-9639-4efd-9363-a76707891878",
-                    "path": "<Keyboard>/numpad2",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Numpad",
-                    "action": "Attacks",
+                    "action": "Normal",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -194,6 +181,28 @@
                     "processors": "",
                     "groups": "Numpad",
                     "action": "Crouch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b753291d-1826-47a4-9260-1adb344c3847",
+                    "path": "<Keyboard>/h",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "WASD",
+                    "action": "Special",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0aa9ca6d-3c61-45d7-84ad-b3c3b6277442",
+                    "path": "<Keyboard>/numpad2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Numpad",
+                    "action": "Special",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
