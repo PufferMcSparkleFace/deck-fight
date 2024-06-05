@@ -33,6 +33,21 @@ public class PlayerController : MonoBehaviour
         jumped = context.action.triggered;
     }
 
+    public void OnCrouch(InputAction.CallbackContext context)
+    {
+        Debug.Log("Crouch");
+    }
+
+    public void OnAttack(InputAction.CallbackContext context)
+    {
+        Debug.Log("Attack");
+    }
+
+    public void OnSpecial(InputAction.CallbackContext context)
+    {
+        Debug.Log("Special");
+    }
+
     void Update()
     {
         groundedPlayer = controller.isGrounded;
