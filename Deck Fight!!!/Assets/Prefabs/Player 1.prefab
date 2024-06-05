@@ -161,7 +161,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSpeed: 3
-  jumpHeight: 3
+  jumpHeight: 3.3
   gravityValue: -40
 --- !u!33 &4715607078383530273
 MeshFilter:

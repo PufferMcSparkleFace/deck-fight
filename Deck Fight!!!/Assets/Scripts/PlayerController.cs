@@ -54,10 +54,9 @@ public class PlayerController : MonoBehaviour
         if (groundedPlayer && playerVelocity.y < 0)
         {
             playerVelocity.y = 0f;
+            Vector3 move = new Vector3(movementInput.x, 0, movementInput.y);
+            controller.Move(move * Time.deltaTime * playerSpeed);
         }
-
-        Vector3 move = new Vector3(movementInput.x, 0, movementInput.y);
-        controller.Move(move * Time.deltaTime * playerSpeed);
 
         if (jumped && groundedPlayer)
         {
