@@ -56,6 +56,7 @@ public class PlayerController : MonoBehaviour
         if (groundedPlayer && playerVelocity.y < 0)
         {
             playerVelocity.y = 0f;
+            playerVelocity.x = 0f;
             Vector3 move = new Vector3(movementInput.x, 0, movementInput.y);
             controller.Move(move * Time.deltaTime * playerSpeed);
         }
@@ -65,11 +66,11 @@ public class PlayerController : MonoBehaviour
             playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
             if (movementInput.x > 0)
             {
-                rb.AddForce(transform.right * 3.3f);
+                playerVelocity.x += 4;
             }
             if (movementInput.x < 0)
             {
-                rb.AddForce(transform.right * -3.3f);
+                playerVelocity.x -= 4;
             }
         }
 
