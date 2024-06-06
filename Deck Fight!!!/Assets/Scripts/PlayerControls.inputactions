@@ -55,7 +55,7 @@
                 {
                     "name": "",
                     "id": "56290e88-00f5-4b08-b818-b5c844b5f19f",
-                    "path": "<Keyboard>/t",
+                    "path": "<Keyboard>/g",
                     "interactions": "",
                     "processors": "",
                     "groups": "WASD",
@@ -187,7 +187,7 @@
                 {
                     "name": "",
                     "id": "b753291d-1826-47a4-9260-1adb344c3847",
-                    "path": "<Keyboard>/y",
+                    "path": "<Keyboard>/h",
                     "interactions": "",
                     "processors": "",
                     "groups": "WASD",
