@@ -113,7 +113,7 @@ public class PlayerController : MonoBehaviour
         }
         
 
-        if (jumped && groundedPlayer)
+        if (jumped && groundedPlayer && isCrouching == false)
         {
             playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
             if (movementInput.x > 0)
@@ -222,7 +222,7 @@ public class PlayerController : MonoBehaviour
             {
                 Debug.Log("5N");
             }
-        }
+        } 
     }
 
     public void OnSpecial(InputAction.CallbackContext context)
