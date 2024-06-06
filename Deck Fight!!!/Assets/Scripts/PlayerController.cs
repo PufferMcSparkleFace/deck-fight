@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour
     public bool isCrouching = false;
     public bool isJumping = false;
     public bool isBlocking = false;
+    public bool isFacingRight = true;
 
     private void Start()
     {
@@ -51,6 +52,7 @@ public class PlayerController : MonoBehaviour
     public void OnCrouch(InputAction.CallbackContext context)
     {
         Debug.Log("Crouch");
+        isCrouching = true;
     }
 
     public void OnAttack(InputAction.CallbackContext context)
@@ -70,10 +72,12 @@ public class PlayerController : MonoBehaviour
         if(sideSwapCheck.x < 0)
         {
             transform.rotation = Quaternion.Euler(0, 0, 0);
+            isFacingRight = true;
         }
         if(sideSwapCheck.x > 0)
         {
             transform.rotation = Quaternion.Euler(0, 180, 0);
+            isFacingRight = false;
         }
 
         groundedPlayer = controller.isGrounded;
@@ -85,6 +89,30 @@ public class PlayerController : MonoBehaviour
             Vector3 move = new Vector3(movementInput.x, 0, movementInput.y);
             controller.Move(move * Time.deltaTime * playerSpeed);
         }
+
+        if(isFacingRight == true)
+        {
+            if (movementInput.x >= 0)
+            {
+                isBlocking = false;
+            }
+            else if (movementInput.x < 0)
+            {
+                isBlocking = true;
+            }
+        }
+        else
+        {
+            if (movementInput.x > 0)
+            {
+                isBlocking = true;
+            }
+            else if (movementInput.x <= 0)
+            {
+                isBlocking = false;
+            }
+        }
+        
 
         if (jumped && groundedPlayer)
         {
