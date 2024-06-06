@@ -16,7 +16,21 @@ public class PlayerSpawner : MonoBehaviour
         var player2 = PlayerInput.Instantiate(prefab: player, playerIndex: 0, controlScheme: "Numpad", pairWithDevice: Keyboard.current);
         player1.transform.position = new Vector2(-5, -2.5f);
         player2.transform.position = new Vector2(5, -2.5f);
-        playerOne = GameObject.FindGameObjectWithTag("Player 1");
-        playerTwo = GameObject.FindGameObjectWithTag("Player 2");
+        
+    }
+
+    private void Update()
+    {
+        if(playerOne == null)
+        {
+            playerOne = GameObject.FindGameObjectWithTag("Player 1");
+        }
+        if(playerTwo == null)
+        {
+            playerTwo = GameObject.FindGameObjectWithTag("Player 2");
+        }
+
+        this.transform.position = 0.5f*(playerOne.transform.position + playerTwo.transform.position);
+        
     }
 }
