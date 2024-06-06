@@ -134,6 +134,27 @@ public class PlayerController : MonoBehaviour
 
     public void OnAttack(InputAction.CallbackContext context)
     {
+        if (context.started)
+        {
+            superCheck1 = true;
+        }
+        if (context.canceled)
+        {
+            superCheck1 = false;
+        }
+
+        if (isJumping == true)
+        {
+            Debug.Log("jN");
+            return;
+        }
+
+        if (superCheck2 == true)
+        {
+            Debug.Log("N+S");
+            return;
+        }
+
 
         if (isFacingRight)
         {
@@ -171,7 +192,7 @@ public class PlayerController : MonoBehaviour
 
         if (isFacingRight == false)
         {
-            if (isCrouching == true)
+            if(isCrouching == true)
             {
                 if (movementInput.x > 0)
                 {
@@ -197,35 +218,11 @@ public class PlayerController : MonoBehaviour
             {
                 Debug.Log("6N");
             }
-            else if (movementInput.x == 0)
+            else if(movementInput.x == 0)
             {
                 Debug.Log("5N");
             }
-        }
-
-        if (context.started)
-        {
-            superCheck1 = true;
-        }
-        if (context.canceled)
-        {
-            superCheck1 = false;
-        }
-
-        if (isJumping == true)
-        {
-            Debug.Log("jN");
-            return;
-        }
-
-        if (superCheck2 == true)
-        {
-            Debug.Log("N+S");
-            return;
-        }
-
-
-        
+        } 
     }
 
     public void OnSpecial(InputAction.CallbackContext context)

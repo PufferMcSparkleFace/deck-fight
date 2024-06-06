@@ -13,8 +13,8 @@ public class PlayerSpawner : MonoBehaviour
     void Start()
     {
         var player1 = PlayerInput.Instantiate(prefab: player, playerIndex: 0, controlScheme: "WASD", pairWithDevice: Keyboard.current);
-        player1.transform.position = new Vector2(-5, -2.5f);
         var player2 = PlayerInput.Instantiate(prefab: player, playerIndex: 0, controlScheme: "Numpad", pairWithDevice: Keyboard.current);
+        player1.transform.position = new Vector2(-5, -2.5f);
         player2.transform.position = new Vector2(5, -2.5f);
         
     }
