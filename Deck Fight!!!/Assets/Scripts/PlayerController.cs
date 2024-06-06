@@ -155,14 +155,27 @@ public class PlayerController : MonoBehaviour
             return;
         }
 
-        if(isCrouching == true)
-        {
-            Debug.Log("2N");
-            return;
-        }
 
         if (isFacingRight)
         {
+            if (isCrouching == true)
+            {
+                if (movementInput.x > 0)
+                {
+                    Debug.Log("3N");
+                }
+                if (movementInput.x < 0)
+                {
+                    Debug.Log("1N");
+                }
+                if (movementInput.x == 0)
+                {
+                    Debug.Log("2N");
+                }
+
+                return;
+            }
+
             if (movementInput.x > 0)
             {
                 Debug.Log("6N");
@@ -179,6 +192,24 @@ public class PlayerController : MonoBehaviour
 
         if (isFacingRight == false)
         {
+            if(isCrouching == true)
+            {
+                if (movementInput.x > 0)
+                {
+                    Debug.Log("1N");
+                }
+                if (movementInput.x < 0)
+                {
+                    Debug.Log("3N");
+                }
+                if (movementInput.x == 0)
+                {
+                    Debug.Log("2N");
+                }
+
+                return;
+            }
+
             if (movementInput.x > 0)
             {
                 Debug.Log("4N");
@@ -217,14 +248,27 @@ public class PlayerController : MonoBehaviour
             return;
         }
 
-        if (isCrouching == true)
-        {
-            Debug.Log("2S");
-            return;
-        }
 
         if (isFacingRight)
         {
+            if(isCrouching == true)
+            {
+                if (movementInput.x > 0)
+                {
+                    Debug.Log("3S");
+                }
+                if (movementInput.x < 0)
+                {
+                    Debug.Log("1S");
+                }
+                if (movementInput.x == 0)
+                {
+                    Debug.Log("2S");
+                }
+
+                return;
+            }
+
             if (movementInput.x > 0)
             {
                 Debug.Log("6S");
@@ -241,6 +285,24 @@ public class PlayerController : MonoBehaviour
 
         if (isFacingRight == false)
         {
+            if (isCrouching == true)
+            {
+                if (movementInput.x > 0)
+                {
+                    Debug.Log("1S");
+                }
+                if (movementInput.x < 0)
+                {
+                    Debug.Log("3S");
+                }
+                if (movementInput.x == 0)
+                {
+                    Debug.Log("2S");
+                }
+
+                return;
+            }
+
             if (movementInput.x > 0)
             {
                 Debug.Log("4S");
