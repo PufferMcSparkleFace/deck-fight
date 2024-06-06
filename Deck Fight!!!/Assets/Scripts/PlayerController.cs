@@ -51,7 +51,14 @@ public class PlayerController : MonoBehaviour
 
     public void OnCrouch(InputAction.CallbackContext context)
     {
-        Debug.Log("Crouch");
+        if (context.started)
+        {
+            isCrouching = true;
+        }
+        if (context.canceled)
+        {
+            isCrouching = false;
+        }
     }
 
     public void OnAttack(InputAction.CallbackContext context)
