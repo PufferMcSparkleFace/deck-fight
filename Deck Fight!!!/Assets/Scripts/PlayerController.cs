@@ -164,11 +164,11 @@ public class PlayerController : MonoBehaviour
                 {
                     Debug.Log("3N");
                 }
-                if (movementInput.x < 0)
+                else if (movementInput.x < 0)
                 {
                     Debug.Log("1N");
                 }
-                if (movementInput.x == 0)
+                else if (movementInput.x == 0)
                 {
                     Debug.Log("2N");
                 }
@@ -180,11 +180,11 @@ public class PlayerController : MonoBehaviour
             {
                 Debug.Log("6N");
             }
-            if (movementInput.x < 0)
+            else if (movementInput.x < 0)
             {
                 Debug.Log("4N");
             }
-            if (movementInput.x == 0)
+            else if (movementInput.x == 0)
             {
                 Debug.Log("5N");
             }
@@ -198,11 +198,11 @@ public class PlayerController : MonoBehaviour
                 {
                     Debug.Log("1N");
                 }
-                if (movementInput.x < 0)
+                else if (movementInput.x < 0)
                 {
                     Debug.Log("3N");
                 }
-                if (movementInput.x == 0)
+                else if (movementInput.x == 0)
                 {
                     Debug.Log("2N");
                 }
@@ -214,11 +214,11 @@ public class PlayerController : MonoBehaviour
             {
                 Debug.Log("4N");
             }
-            if (movementInput.x < 0)
+            else if (movementInput.x < 0)
             {
                 Debug.Log("6N");
             }
-            if(movementInput.x == 0)
+            else if(movementInput.x == 0)
             {
                 Debug.Log("5N");
             }
@@ -257,11 +257,11 @@ public class PlayerController : MonoBehaviour
                 {
                     Debug.Log("3S");
                 }
-                if (movementInput.x < 0)
+                else if (movementInput.x < 0)
                 {
                     Debug.Log("1S");
                 }
-                if (movementInput.x == 0)
+                else if (movementInput.x == 0)
                 {
                     Debug.Log("2S");
                 }
@@ -273,11 +273,11 @@ public class PlayerController : MonoBehaviour
             {
                 Debug.Log("6S");
             }
-            if (movementInput.x < 0)
+            else if (movementInput.x < 0)
             {
                 Debug.Log("4S");
             }
-            if (movementInput.x == 0)
+            else if (movementInput.x == 0)
             {
                 Debug.Log("5S");
             }
@@ -291,11 +291,11 @@ public class PlayerController : MonoBehaviour
                 {
                     Debug.Log("1S");
                 }
-                if (movementInput.x < 0)
+                else if (movementInput.x < 0)
                 {
                     Debug.Log("3S");
                 }
-                if (movementInput.x == 0)
+                else if (movementInput.x == 0)
                 {
                     Debug.Log("2S");
                 }
@@ -307,11 +307,11 @@ public class PlayerController : MonoBehaviour
             {
                 Debug.Log("4S");
             }
-            if (movementInput.x < 0)
+            else if (movementInput.x < 0)
             {
                 Debug.Log("6S");
             }
-            if (movementInput.x == 0)
+            else if (movementInput.x == 0)
             {
                 Debug.Log("5S");
             }
