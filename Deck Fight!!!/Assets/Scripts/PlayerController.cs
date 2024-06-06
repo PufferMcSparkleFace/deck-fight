@@ -22,6 +22,10 @@ public class PlayerController : MonoBehaviour
     public GameObject otherPlayer;
     public Vector3 sideSwapCheck;
 
+    public bool isCrouching = false;
+    public bool isJumping = false;
+    public bool isBlocking = false;
+
     private void Start()
     {
         controller = gameObject.GetComponent<CharacterController>();
@@ -73,10 +77,11 @@ public class PlayerController : MonoBehaviour
         }
 
         groundedPlayer = controller.isGrounded;
-        if (groundedPlayer && playerVelocity.y < 0)
+        if (groundedPlayer && playerVelocity.y < 0 && isCrouching == false)
         {
             playerVelocity.y = 0f;
             playerVelocity.x = 0f;
+            isJumping = false;
             Vector3 move = new Vector3(movementInput.x, 0, movementInput.y);
             controller.Move(move * Time.deltaTime * playerSpeed);
         }
@@ -92,6 +97,8 @@ public class PlayerController : MonoBehaviour
             {
                 playerVelocity.x -= 4;
             }
+
+            isJumping = true;
         }
 
         playerVelocity.y += gravityValue * Time.deltaTime;
