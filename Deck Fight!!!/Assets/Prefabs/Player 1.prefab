@@ -249,6 +249,7 @@ MonoBehaviour:
   gravityValue: -40
   playerManager: {fileID: 0}
   otherPlayer: {fileID: 0}
+  sideSwapCheck: {x: 0, y: 0, z: 0}
 --- !u!33 &4715607078383530273
 MeshFilter:
   m_ObjectHideFlags: 0
