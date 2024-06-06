@@ -143,15 +143,15 @@ public class PlayerController : MonoBehaviour
             superCheck1 = false;
         }
 
-        if (superCheck2 == true)
-        {
-            Debug.Log("N+S");
-            return;
-        }
-
         if (isJumping == true)
         {
             Debug.Log("jN");
+            return;
+        }
+
+        if (superCheck2 == true)
+        {
+            Debug.Log("N+S");
             return;
         }
 
@@ -205,15 +205,15 @@ public class PlayerController : MonoBehaviour
             superCheck2 = false;
         }
 
-        if (superCheck1 == true)
-        {
-            Debug.Log("N+S");
-            return;
-        }
-
         if (isJumping == true)
         {
             Debug.Log("jS");
+            return;
+        }
+
+        if (superCheck1 == true)
+        {
+            Debug.Log("N+S");
             return;
         }
 
