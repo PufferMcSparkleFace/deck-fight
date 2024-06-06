@@ -18,11 +18,19 @@ public class PlayerController : MonoBehaviour
 
     private Vector2 movementInput = Vector2.zero;
     private bool jumped = false;
+    public GameObject playerManager;
+    public GameObject otherPlayer;
 
     private void Start()
     {
         controller = gameObject.GetComponent<CharacterController>();
         rb = GetComponent<Rigidbody>();
+        playerManager = GameObject.FindGameObjectWithTag("Player Manager");
+        otherPlayer = GameObject.FindGameObjectWithTag("Player 1");
+        if (otherPlayer == null)
+        {
+            this.gameObject.tag = "Player 1";
+        }
     }
 
     public void OnMove(InputAction.CallbackContext context)

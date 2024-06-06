@@ -101,7 +101,7 @@ GameObject:
   - component: {fileID: 3885140261142005782}
   m_Layer: 0
   m_Name: Player 1
-  m_TagString: Untagged
+  m_TagString: Player 2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -247,6 +247,8 @@ MonoBehaviour:
   playerSpeed: 3
   jumpHeight: 3.3
   gravityValue: -40
+  playerManager: {fileID: 0}
+  otherPlayer: {fileID: 0}
 --- !u!33 &4715607078383530273
 MeshFilter:
   m_ObjectHideFlags: 0
