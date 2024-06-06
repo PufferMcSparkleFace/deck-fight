@@ -15,10 +15,4 @@ public class PlayerSpawner : MonoBehaviour
         player1.transform.position = new Vector2(-5, -2.5f);
         player2.transform.position = new Vector2(5, -2.5f);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
