@@ -61,15 +61,6 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void OnAttack(InputAction.CallbackContext context)
-    {
-        Debug.Log("Attack");
-    }
-
-    public void OnSpecial(InputAction.CallbackContext context)
-    {
-        Debug.Log("Special");
-    }
 
     void Update()
     {
@@ -137,5 +128,99 @@ public class PlayerController : MonoBehaviour
 
         playerVelocity.y += gravityValue * Time.deltaTime;
         controller.Move(playerVelocity * Time.deltaTime);
+    }
+
+    public void OnAttack(InputAction.CallbackContext context)
+    {
+        if (isJumping == true)
+        {
+            Debug.Log("jN");
+            return;
+        }
+
+        if(isCrouching == true)
+        {
+            Debug.Log("2N");
+            return;
+        }
+
+        if (isFacingRight)
+        {
+            if (movementInput.x > 0)
+            {
+                Debug.Log("6N");
+            }
+            if (movementInput.x < 0)
+            {
+                Debug.Log("4N");
+            }
+            if (movementInput.x == 0)
+            {
+                Debug.Log("5N");
+            }
+        }
+
+        if (isFacingRight == false)
+        {
+            if (movementInput.x > 0)
+            {
+                Debug.Log("4N");
+            }
+            if (movementInput.x < 0)
+            {
+                Debug.Log("6N");
+            }
+            if(movementInput.x == 0)
+            {
+                Debug.Log("5N");
+            }
+        }
+    }
+
+    public void OnSpecial(InputAction.CallbackContext context)
+    {
+        if (isJumping == true)
+        {
+            Debug.Log("jS");
+            return;
+        }
+
+        if (isCrouching == true)
+        {
+            Debug.Log("2S");
+            return;
+        }
+
+        if (isFacingRight)
+        {
+            if (movementInput.x > 0)
+            {
+                Debug.Log("6S");
+            }
+            if (movementInput.x < 0)
+            {
+                Debug.Log("4S");
+            }
+            if (movementInput.x == 0)
+            {
+                Debug.Log("5S");
+            }
+        }
+
+        if (isFacingRight == false)
+        {
+            if (movementInput.x > 0)
+            {
+                Debug.Log("4S");
+            }
+            if (movementInput.x < 0)
+            {
+                Debug.Log("6S");
+            }
+            if (movementInput.x == 0)
+            {
+                Debug.Log("5S");
+            }
+        }
     }
 }
