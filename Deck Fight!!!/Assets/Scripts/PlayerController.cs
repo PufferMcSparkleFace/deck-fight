@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
     private bool jumped = false;
     public GameObject playerManager;
     public GameObject otherPlayer;
-    public float sideSwapCheck;
+    public Vector3 sideSwapCheck;
 
     private void Start()
     {
@@ -61,7 +61,16 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        sideSwapCheck = Vector2.Distance(playerManager.transform.position, this.transform.position);
+        sideSwapCheck = playerManager.transform.InverseTransformPoint(this.transform.position);
+
+        if(sideSwapCheck.x < 0)
+        {
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+        }
+        if(sideSwapCheck.x > 0)
+        {
+            transform.rotation = Quaternion.Euler(0, 180, 0);
+        }
 
         groundedPlayer = controller.isGrounded;
         if (groundedPlayer && playerVelocity.y < 0)
