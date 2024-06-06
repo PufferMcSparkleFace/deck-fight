@@ -26,6 +26,8 @@ public class PlayerController : MonoBehaviour
     public bool isJumping = false;
     public bool isBlocking = false;
     public bool isFacingRight = true;
+    public bool superCheck1 = false;
+    public bool superCheck2 = false;
 
     private void Start()
     {
@@ -132,6 +134,21 @@ public class PlayerController : MonoBehaviour
 
     public void OnAttack(InputAction.CallbackContext context)
     {
+        if (context.started)
+        {
+            superCheck1 = true;
+        }
+        if (context.canceled)
+        {
+            superCheck1 = false;
+        }
+
+        if (superCheck2 == true)
+        {
+            Debug.Log("N+S");
+            return;
+        }
+
         if (isJumping == true)
         {
             Debug.Log("jN");
@@ -179,6 +196,21 @@ public class PlayerController : MonoBehaviour
 
     public void OnSpecial(InputAction.CallbackContext context)
     {
+        if (context.started)
+        {
+            superCheck2 = true;
+        }
+        if (context.canceled)
+        {
+            superCheck2 = false;
+        }
+
+        if (superCheck1 == true)
+        {
+            Debug.Log("N+S");
+            return;
+        }
+
         if (isJumping == true)
         {
             Debug.Log("jS");
